@@ -2,7 +2,7 @@
 
 ## Notas gerais
 
-* Sistema de import: @import e pub.
+* Sistema de import: **@import** e **pub**.
 * Parâmetros de funções são constantes.
 * Não existe sobrecarga de função.
 
@@ -19,7 +19,7 @@ pub const S = struct {
 ```
 
 * Na criação, todos os campos devem ser preenchidos.
-* Structs podem conter métodos, declarações (ex.: outras structs) e pode não conter campos, atuando apenas como um namespace:
+* Structs podem conter métodos, declarações (ex.: outras structs) e pode não conter campos, atuando apenas como um **namespace**:
 
 ```zig
 pub const User = struct {
