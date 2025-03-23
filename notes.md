@@ -5,6 +5,7 @@
 * Sistema de import: **@import** e **pub**.
 * Parâmetros de funções são constantes.
 * Não existe sobrecarga de função.
+* Tipos são inferidos sempre que possível.
 
 ## Structs
 
@@ -34,4 +35,26 @@ pub const User = struct {
 		}
 	}
 };
+```
+
+* Métodos são apenas funções comuns que podem ser chamados com a sintaxe do ponto (.).
+
+```zig
+// call diagnose on user
+user.diagnose();
+
+// The above is syntactical sugar for:
+User.diagnose(user);
+```
+
+* Structs anônimas podem ser usadas no retorno de funções e terão seu tipo inferido de acordo com a declaração da função:
+
+```zig
+pub fn init(name: []const u8, power: u64) User {
+	// instead of return User{...}
+	return .{
+		.name = name,
+		.power = power,
+	};
+}
 ```
