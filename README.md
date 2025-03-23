@@ -1,1 +1,1 @@
-# learn_zig
+# Notas e códigos do aprendizado Zig
